@@ -1,9 +1,6 @@
-import React, { useState } from "react"
-import { Checkbox, Stack, Grid, Box, Text } from "@chakra-ui/react"
-import { CustomCheckbox as CCheckbox} from "./customCheckbox"
+import { Checkbox, Grid } from "@chakra-ui/react"
 
-
-export function MultiCheckbox({ children }) {
+export default function MultiCheckbox({ children }) {
   const [checkedItems, setCheckedItems] = React.useState([false, false])
 
   const allChecked = checkedItems.every(Boolean)
@@ -16,8 +13,10 @@ export function MultiCheckbox({ children }) {
         isIndeterminate={isIndeterminate}
         onChange={(e) => setCheckedItems([e.target.checked, e.target.checked])}
         size={"lg"}
-        mx={10}
+        mx={8}
+        p={2}
         mb={3}
+        bg={"lightPalidBlue"}
         style={{
           textDecoration: allChecked ? "line-through" : "none",
         }}
@@ -40,7 +39,7 @@ export function MultiCheckbox({ children }) {
           }}
           mb={5}
         >
-          {/* Child Checkbox 1 */}
+          Child Checkbox 1 
           un texto muy largo para escribir aqui que sea bastante combicente
           un texto muy largo para escribir aqui que sea bastante combicente
         </Checkbox>
@@ -57,60 +56,4 @@ export function MultiCheckbox({ children }) {
       </Stack>
     </Grid>
   )
-
 }
-
-export function SingleCheckbox({ children }) {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  }
-
-  return (
-    <Grid templateColums="1fr">
-      <Checkbox
-        isChecked={isChecked}
-        onChange={handleChange}
-        size={"lg"}
-        mx={10}
-        mb={5}
-        style={{
-          textDecoration: isChecked ? "line-through" : "none",
-        }}
-      >
-        {children}
-      </Checkbox>
-    </Grid>
-  )
-}
-
-
-export function CustomCheckbox({ children }) {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-  return (
-    <Box p={4}>
-      <CCheckbox
-        type="checkbox"
-        onChange={handleCheckboxChange}
-        isChecked={isChecked}
-      />
-      <Text ml={2}>Custom Checkbox</Text>
-    </Box>
-    // <Grid templateColumns="1fr">
-    //   <CCheckbox
-    //     type="checkbox"
-    //     size={"lg"}
-    //     mx={10}
-    //     mb={5}
-    //   >
-    //     {children}
-    //   </CCheckbox>
-    // </Grid>
-  )
-}
-

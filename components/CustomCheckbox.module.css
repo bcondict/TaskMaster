@@ -1,0 +1,58 @@
+/* all the content */
+.customCheckbox {
+    /* display: inline-block; */
+    display: grid;
+    position: relative;
+    margin-left: 8%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #ADC4CE;
+    border-radius: 40px;
+    padding: 8px;
+    width: 84%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+}
+
+
+/* Checkmark box */
+
+.checkboxCheckmark, .checkboxInput{
+    position: absolute;
+    cursor: pointer;
+    left: 8px;
+    width: 20px;
+    height: 20px;
+    /* background-color: white; */
+    border-radius: 30%;
+    border: 2px solid white;
+}
+
+.checkboxInput {
+    opacity: 0;
+}
+
+
+/* checkbox mark as checked */
+
+.checkboxInput:checked + .checkboxCheckmark {
+    background-color: #EEE0C9;
+    border: 0; /* remove border */
+    background-image: url("../public/check_button.svg");
+    background-size: cover;
+    transition: opacity 10s ease-in-out;
+}
+
+
+/* Text */
+
+.checkboxText {
+    position: relative;
+    /* margin: 8px 8px 0 35px; */
+    /* grid-row: start; */
+    grid-column-start: 1;
+    margin-left: 30px;
+}
+

@@ -1,5 +1,6 @@
 import { Box, Container, Heading } from "@chakra-ui/react";
-import { CustomCheckbox, MultiCheckbox, SingleCheckbox } from "../components/checkbox";
+import AddTaskButton from "../components/AddTaskButton";
+import CustomCheckbox from "../components/CustomCheckbox"
 
 export default function Home() {
   return (
@@ -19,15 +20,13 @@ export default function Home() {
         >
           Today's Task
         </Heading>
-        <SingleCheckbox>Task 1</SingleCheckbox>
-        <SingleCheckbox>Task 2</SingleCheckbox>
-        <MultiCheckbox>
-          big task 1
-        </MultiCheckbox>
-        <CustomCheckbox>Task 3</CustomCheckbox>
+        <CustomCheckbox>Task 1</CustomCheckbox>
+        <CustomCheckbox>mucho texto mucho texto mnucho texto </CustomCheckbox>
+        <CustomCheckbox>mmucho texto mucho texto mnucho texto ucho texto mucho texto mnucho texto </CustomCheckbox>
       </Box>
 
-      
+      <AddTaskButton/>
+
     </Container>
   )
 }

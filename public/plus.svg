@@ -1,0 +1,21 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="48"
+    width="25"
+    height="120"
+    rx="12.5"
+    fill="white"
+  />
+  <rect
+    y="73"
+    width="25"
+    height="120"
+    rx="12.5"
+    transform="rotate(-90 0 73)"
+    fill="white"
+  />
+    <!-- fill="#E1D7C6" lightBeige -->
+    <!-- fill="#579BB1" light blue, era el que tenia-->
+    <!-- fill="#102C57" navy blue-->
+    
+</svg>

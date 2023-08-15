@@ -1,0 +1,36 @@
+.customButton {
+    /* background-color: #EEE0C9; */
+    /* background-color: #E1D7C6; */
+    background-color: #579BB1;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-image: url("../public/plus.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+}
+
+.customButton:hover {
+    /* background-color: #579BB1;
+    background-image: url("../public/plus_hover.svg"); */
+    /* text-shadow: 0px 0px 6px rgba(255, 255, 255, 1); */
+    /* -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57); */
+    transition: all 0.4s ease, ;
+    scale: 0.9;
+}
+
+
+
+/* border-radius: 100px;
+position: fixed;
+bottom: 10%;
+right: 10%;
+icon: <AddTaskIcon fillColor={"#102C57"}/>;
+&:hover {
+    background-color: red;
+    icon: <AddTaskIcon fillColor={"#FFFFFF"}/>; */
