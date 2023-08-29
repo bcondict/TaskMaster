@@ -1,36 +1,69 @@
+/*
+.buttonContainer {
+    position: fixed;
+    background-color: #EEE0C9;
+    background-color: red;
+    bottom: 10%;
+    right: 10%;
+    height: 100px;
+}
+*/
+
+.buttonContainer {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    height: 140px;
+    width: 140px;
+    background-color: #f1f0e8;
+    /* background-color: red; */
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .customButton {
-    /* background-color: #EEE0C9; */
-    /* background-color: #E1D7C6; */
     background-color: #579BB1;
     height: 100px;
     width: 100px;
     border-radius: 100px;
-    position: fixed;
-    bottom: 10%;
-    right: 10%;
     background-image: url("../public/plus.svg");
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 60%;
     background-position: center;
+    transition: all 0.3s ease-in-out ;
 }
 
 .customButton:hover {
-    /* background-color: #579BB1;
-    background-image: url("../public/plus_hover.svg"); */
-    /* text-shadow: 0px 0px 6px rgba(255, 255, 255, 1); */
-    /* -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57); */
-    transition: all 0.4s ease, ;
+    background-image: url("../public/plus_hover.svg");
+    scale: 0.9;
+}
+
+.rotated {
+    transform: rotate(360deg);
+    background-image: url("../public/up_arrow.svg");
+}
+
+.rotated:hover {
+    background-image: url("../public/up_arrow_hover.svg");
     scale: 0.9;
 }
 
 
+@media (max-width: 600px) {
+    .buttonContainer {
+        bottom: 5%;
+        right: 5%;
+        /* background-color: red; */
+        width: 120px;
+        height: 120px;
+    }
 
-/* border-radius: 100px;
-position: fixed;
-bottom: 10%;
-right: 10%;
-icon: <AddTaskIcon fillColor={"#102C57"}/>;
-&:hover {
-    background-color: red;
-    icon: <AddTaskIcon fillColor={"#FFFFFF"}/>; */
+    .customButton {
+        /* background-color: transparent; */
+        width: 90px;
+        height: 90px;
+    }
+}

@@ -8,8 +8,11 @@ export default function Home() {
       <Box
         borderRadius={"lg"}
         bg={"palidBlue"}
+        // bg={"#538499"}
+        // bg={"#6EB0CC"}
         p={3}
-
+        // h={100}
+        minH={"90vh"}
       >
         <Heading
           align={"center"}
@@ -20,9 +23,9 @@ export default function Home() {
         >
           Today's Task
         </Heading>
-        <CustomCheckbox>Task 1</CustomCheckbox>
+        <CustomCheckbox>Task 1 </CustomCheckbox>
         <CustomCheckbox>mucho texto mucho texto mnucho texto </CustomCheckbox>
-        <CustomCheckbox>mmucho texto mucho texto mnucho texto ucho texto mucho texto mnucho texto </CustomCheckbox>
+        <CustomCheckbox>mmucho texto mucho texto mucho texto ucho texto mucho texto mucho texto </CustomCheckbox>
       </Box>
 
       <AddTaskButton/>

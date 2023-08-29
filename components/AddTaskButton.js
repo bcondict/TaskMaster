@@ -1,17 +1,26 @@
-import { IconButton } from "@chakra-ui/react"
-import { AddTaskIcon } from "./Icons"
-import { AddButton } from "./ButtonStyle"
 import styles from './AddTaskButton.module.css'
+import { useState } from "react"
 
 
 /**
  * Button to add a new task to the list
- * @param { function } onClic - Function to execute when the button is clicked
+ *
  * @returns { JSX.Element } Button to add a task
  */
-const AddTaskButton = ({ onClic }) => {
+const AddTaskButton = () => {
+  const [buttonPressed, setButtonPressed] = useState(false)
+
+  const hanldeButtonClick = () => {
+    setButtonPressed(!buttonPressed)
+  }
+
   return (
-    <button className={styles.customButton}/>
+    <div className={styles.buttonContainer}>
+      <button
+        className={`${styles.customButton} ${buttonPressed ? styles.rotated : ''}`}
+        onClick={hanldeButtonClick}
+      />
+    </div>
   )
 }
 export default AddTaskButton

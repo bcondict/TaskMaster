@@ -4,7 +4,7 @@
     width="25"
     height="120"
     rx="12.5"
-    fill="white"
+    fill="black"
   />
   <rect
     y="73"
@@ -12,7 +12,7 @@
     height="120"
     rx="12.5"
     transform="rotate(-90 0 73)"
-    fill="white"
+    fill="black"
   />
     <!-- fill="#E1D7C6" lightBeige -->
     <!-- fill="#579BB1" light blue, era el que tenia-->

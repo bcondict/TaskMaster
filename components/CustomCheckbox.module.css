@@ -1,18 +1,12 @@
 /* Container */
-.customContainer {
-    /* background-color: blue; */
-    /* padding: 20px; */
-    /* margin: 20px; */
-}
 
 /* all the content */
 
-.customCheckbox {
+.customContainer {
     display: grid;
     position: relative;
     margin-left: 8%;
     margin-bottom: 12px;
-    cursor: pointer;
     font-size: 18px;
     background-color: #ADC4CE;
     border-radius: 40px;
@@ -20,13 +14,22 @@
     width: 84%;
     justify-content: center;
     align-items: center;
-    grid-template-columns: auto 1fr auto;
-    /* background-color: black; */
-    /* padding-right: 40px; */
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 3;
+}
+
+.customCheckbox {
+    display: grid;
+    grid-column: 1/10;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .customCheckbox:hover {
-    color: #EEE0C9;
+    /* color: #EEE0C9; original */
+    /* color: #568F4A; */
+    /* color: #E3D5BF; */
+    /* color: #F2E3B1; */
 }
 
 /* Checkmark box */
@@ -41,6 +44,8 @@
     border: 2px solid white;
     background-image: url("../public/check_button_uncheck.svg");
     transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in;
+    display: grid;
+    align-self: center;
 }
 
 .checkboxInput {
@@ -65,6 +70,10 @@
     position: relative;
     grid-column-start: 1;
     margin-left: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
     /* background-color: black; */
+}
+
+.checkboxInput:checked + .checkboxText {
+    text-decoration: line-through;
 }
