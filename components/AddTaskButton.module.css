@@ -1,13 +1,4 @@
-/*
-.buttonContainer {
-    position: fixed;
-    background-color: #EEE0C9;
-    background-color: red;
-    bottom: 10%;
-    right: 10%;
-    height: 100px;
-}
-*/
+/* Complete container  */
 
 .buttonContainer {
     position: fixed;
@@ -23,6 +14,9 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* Inner circle */
 
 .customButton {
     background-color: #579BB1;
@@ -40,6 +34,9 @@
     background-image: url("../public/plus_hover.svg");
     scale: 0.9;
 }
+
+
+/* Pressed */
 
 .rotated {
     transform: rotate(360deg);

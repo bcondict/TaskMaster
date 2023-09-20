@@ -6,21 +6,33 @@
     display: grid;
     grid-column: 10;
     position: absolute;
-    /* background-image: url("../public/delete_button.svg"); */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
     /* background-color: black; */
     height: 20px;
     width: 20px;
     margin: 5px;
     cursor: pointer;
+
+    transition: all 0.3s ease-in-out;
 }
 
-.delteButtonIcon {
-    fill: red;
-    background-color: blue;
+/* svg editing  */
+.iconGroup {
+    transform: translate(7%, 7%);
 }
 
-/* .deleteButton:hover {
-    
-} */
+.iconChild {
+    fill: var(--delete-button-color);
+
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* On Hover */
+
+.deleteButton:hover {
+    transform: scale(1.4);
+}
+.deleteButton:hover .iconChild {
+    fill: #E04662;
+    transform-origin: center;
+}
