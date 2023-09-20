@@ -6,15 +6,19 @@
     display: grid;
     grid-column: 10;
     position: absolute;
-    background-image: url("../public/delete_button.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url("../public/delete_button.svg"); */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
     /* background-color: black; */
     height: 20px;
     width: 20px;
     margin: 5px;
     cursor: pointer;
+}
 
+.delteButtonIcon {
+    fill: red;
+    background-color: blue;
 }
 
 .deleteButton:hover {
