@@ -15,12 +15,15 @@ const config = {
 
 const fonts = {
   heading: "Inika",
-  body: "Inika",
+  // body: "Inika",
+  // body: "Mooli",
+  // body: "Croissant One",
+  // body: "Ubuntu",
 }
 
 const fontWeights = {
-    normal: 400,
-    bold: 700,
+  normal: 400,
+  bold: 700,
 }
 
 const colors = {
