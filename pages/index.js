@@ -36,9 +36,9 @@ export default function Home() {
         >
           Today's Task
         </Heading>
-        {/* <CustomCheckbox>Task 1 </CustomCheckbox>
+        <CustomCheckbox>Task 1 </CustomCheckbox>
         <CustomCheckbox>mucho texto mucho texto mnucho texto </CustomCheckbox>
-        <CustomCheckbox>mmucho texto mucho texto mucho texto ucho texto mucho texto mucho texto </CustomCheckbox> */}
+        <CustomCheckbox>mmucho texto mucho texto mucho texto ucho texto mucho texto mucho texto </CustomCheckbox>
 
         {tasks.map((task, index) => (
           <CustomCheckbox key={index}>{task.task}</CustomCheckbox>
