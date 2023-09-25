@@ -1,0 +1,105 @@
+
+/* all box */
+
+.taskList {
+    position: relative;
+
+    font-size: 18px;
+
+    border-radius: 20px;
+
+    width: inherit;
+    margin-bottom: .5rem; 
+
+}
+
+/* Tittle */
+.taskListSummary {
+    /* Display */
+    display: flex;
+    align-items: center;
+
+    /* text */
+    font-size: 18px;
+    color: #000000;
+
+    /* visual properties */
+    background-color: #ADC4CE;
+    list-style: none;
+
+    /* pointer */
+    user-select: none;
+    cursor: pointer;
+
+
+    /* box model */
+    padding-block: .5rem;
+    padding-inline: 1.5rem;
+    border-radius: 20px 20px 0px 0px ;
+
+    transition: all 500ms ease;
+}
+
+/* Content */
+.taskListContent {
+    /* text */
+    font-size: 18px;
+    color: #000000;
+
+    /* visual properties */
+    background-color: #FFA0CE;
+    list-style: none;
+
+    /* pointer */
+    user-select: none;
+    cursor: pointer;
+
+    /* box model */
+    padding-block: .5rem;
+    padding-inline: 1.5rem;
+    border-radius: 0px 0px 20px 20px ;
+}
+
+
+/* Buttons */
+.taskListSummary > [role="button"] {
+    /* box model */
+    position: absolute;
+}
+
+/* Custom Checkbox */
+.taskListSummary > [role="button"]:first-child {
+    /* box model */
+    height: 20px;
+    width: 20px;
+    left: .6rem;
+
+}
+
+/* Text */
+.taskListSummary > div {
+    /* background-color: red; */
+    margin-left: 1rem;
+    width: 90%;
+}
+
+/* Delete Bottom */
+.taskListSummary > [role="button"]:last-child {
+    /* box model */
+    right: .3rem;
+}
+
+
+/* Displayer */
+.taskListSummary {
+    /* box model */
+    border-radius: 20px;
+}
+
+.taskList[open] > .taskListSummary {
+    /* box model */
+    border-radius: 20px 20px 0px 0px ;
+}
+
+
+/* Animations */

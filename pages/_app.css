@@ -1,3 +1,15 @@
 :root {
     --delete-button-color: #C41A6C;
 }
+
+[data-debuger] {
+    box-shadow: 0px 0px 0px 1px red;
+}
+
+[data-debuger-children] > *{
+    box-shadow: 0px 0px 0px 1px red;
+
+}
+[data-debuger-all], [data-debuger-all] *{
+    box-shadow: 0px 0px 0px 1px red;
+}

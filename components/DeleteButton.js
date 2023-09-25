@@ -6,6 +6,7 @@ import DeleteIcon from '../public/delete_button_icon'
 const DeleteButton = () => {
   return (
     <button
+      role="button"
       className={styles.deleteButton}
     >
       <DeleteIcon classGroup={styles.iconGroup} classChild={styles.iconChild }/>

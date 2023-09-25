@@ -1,0 +1,11 @@
+.customBackground {
+    overflow: hidden;
+    overflow-y: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.customBackground::-webkit-scrollbar {
+    display: none;
+}

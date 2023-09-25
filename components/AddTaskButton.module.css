@@ -2,8 +2,15 @@
 
 .buttonContainer {
     position: fixed;
-    bottom: 10%;
-    right: 10%;
+    bottom: 0;
+    right: 0;
+    /*
+    */
+    /*
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    */
     height: 140px;
     width: 140px;
     background-color: #f1f0e8;
@@ -51,16 +58,16 @@
 
 @media (max-width: 600px) {
     .buttonContainer {
-        bottom: 5%;
-        right: 5%;
+        bottom: .3rem;
+        right: .3rem;
         /* background-color: red; */
-        width: 120px;
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
 
     .customButton {
         /* background-color: transparent; */
-        width: 90px;
-        height: 90px;
+        width: 60px;
+        height: 60px;
     }
 }
