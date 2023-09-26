@@ -3,9 +3,6 @@
 /* Delete button */
 
 .deleteButton {
-    display: grid;
-    grid-column: -2;
-    /* position: absolute; */
 
     height: 20px;
     width: 20px;
@@ -13,13 +10,25 @@
     cursor: pointer;
 
     transition: all 0.3s ease-in-out;
+    /* display: none; */
+    color: none;
+}
 
-    /* justify-self: center; */
+.deleteButton > * {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-self: center;
+    justify-self: center;
+    transform: translate(-30%, -10%);
 }
 
 /* svg editing  */
-.iconGroup {
-    transform: translate(7%, 7%);
+.iconGroup > *{
+    /* transform: translate(7%, 7%); */
+    size: 10rem;
+    background-color: black;
+    width: 20px;
 }
 
 .iconChild {
@@ -36,5 +45,5 @@
 }
 .deleteButton:hover .iconChild {
     fill: #E04662;
-    transform-origin: center;
+    /* fill: black; */
 }

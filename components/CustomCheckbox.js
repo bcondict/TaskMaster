@@ -30,7 +30,7 @@ const CustomCheckbox = () => {
 
   return (
     // Complete the checkbox component
-    <label role="button" className={styles.customCheckbox} checked check>
+    <label role="button" className={styles.customCheckbox}>
       {/* Default Check Box */}
       <input
         type="checkbox"

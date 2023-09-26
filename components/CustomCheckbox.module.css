@@ -1,29 +1,28 @@
 /* Custom Checkmark and text */
 .customCheckbox {
     position: relative;
+
     height: 50%;
     width: 10%;
-    display: grid;
-    grid-column: 0;
+
     transition: all 0.3s ease-in-out;
-    /* background-color: black; */
 }
 
 
 /* Checkmark box Integate */
 .checkboxCheckmark, .checkboxInput{
     position: absolute;
-    /* position: relative; */
-    cursor: pointer;
+    background-image: url("../public/check_button_uncheck.svg");
+
     width: 20px;
     height: 20px;
+
+    cursor: pointer;
     border-radius: 30%;
-    border: 2px solid white;
-    background-image: url("../public/check_button_uncheck.svg");
+    box-shadow: 0 0 0 2px white;
+    /* border: 2px solid white; */
+
     transition: background-image 0.3s ease-in-out, background-color 0.3s ease-in;
-    align-self: center;
-    transform-origin: center;
-    /* justify-self: center; */
 }
 
 /* Default Checkmark */
@@ -35,8 +34,8 @@
 /* checkbox mark as checked */
 .checkboxInput:checked + .checkboxCheckmark {
     background-color: #EEE0C9;
-    border: 0; /* remove border */
     background-image: url("../public/check_button.svg");
     background-size: cover;
+
     transition: all 0.15s ;
 }

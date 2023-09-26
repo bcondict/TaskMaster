@@ -19,6 +19,7 @@ const fonts = {
   // body: "Mooli",
   // body: "Croissant One",
   // body: "Ubuntu",
+  // body: "Inder"
 }
 
 const fontWeights = {
@@ -38,7 +39,7 @@ const colors = {
 const theme = extendTheme({
   config,
   styles,
-  fonts,
+  // fonts,
   fontWeights,
   colors
 });

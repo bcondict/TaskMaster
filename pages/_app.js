@@ -6,16 +6,19 @@ import * as styles from "./_app.css"
 
 export default function MyApp({ Component, pageProps, router}) {
   return (
-    <ChakraProvider className={styles} theme={theme}>
-      <CSSReset/>
-      <Layout router={router}>
-        <AnimatePresence
-          mode="wait"
-          initial={false}
-        >
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
-    </ChakraProvider>
+    // <ChakraProvider className={styles} theme={theme}>
+    //   <CSSReset/>
+    //   <Layout router={router}>
+    //     <AnimatePresence
+    //       mode="wait"
+    //       initial={false}
+    //     >
+    //       <Component {...pageProps} key={router.route} />
+    //     </AnimatePresence>
+    //   </Layout>
+    // </ChakraProvider>
+    <div className={styles}>
+      <Component {...pageProps} />
+    </div>
   );
 }

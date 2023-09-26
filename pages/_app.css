@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@300&display=swap');
 :root {
     --delete-button-color: #C41A6C;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Indie Flower', cursive;
 }
 
 [data-debuger] {

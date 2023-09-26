@@ -9,3 +9,30 @@
 .customBackground::-webkit-scrollbar {
     display: none;
 }
+
+/* Background */
+.customBackground {
+    /* Display */
+    background-color: #96B6C5;
+
+    /* box model */
+    width: 30rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+/* Header */
+.customBackground h1 {
+    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: .2rem;
+}
+
+/* Mobile Size */
+@media (max-width: 500px) {
+    .customBackground {
+        width: 95%;
+    }
+}
