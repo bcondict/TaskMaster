@@ -1,0 +1,90 @@
+/* 
+.taskListContent {
+}
+*/
+
+
+/* Date Information */
+.date {
+    display: flex;
+    padding: .1rem;
+    justify-content: flex-end;
+}
+.date > * > * {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border-radius: 1rem;
+}
+
+/* Child Date Information */
+
+.date .dateInformation {
+    position: absolute;
+    display: none;
+}
+
+.date > :nth-child(1) .dateInformation {
+    left: 4rem;
+    top: .4rem;
+
+    background-color: #c8ccca;
+    /* background-color: red; */
+
+    padding: .1;
+    height: 1.2rem;
+}
+
+.date > :nth-child(2) .dateInformation {
+    left: 11.2rem;
+    top: .4rem;
+
+    background-color: #c8ccca;
+
+    padding: .1;
+    height: 1.2rem;
+}
+
+.date .dateNumer {
+    box-shadow: 0 0 0 2px #eff4f0;
+    /* display: inline; */
+
+    /* background-color: red; */
+
+    font-size: medium;
+    margin: .5rem;
+    margin-top: .8rem;
+    /* margin-right: -.1rem; */
+}
+
+/* other text */
+/*
+.contentText {
+    background-color: red;
+}
+*/
+
+.removeButton {
+    position: relative;
+
+    right: -85%;
+
+    text-align: center;
+    width: fit-content;
+}
+
+
+/* Hover */
+.removeButton:hover {
+    transform-origin: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #E04662;
+}
+
+
+/* Media Queries */
+@media (max-width: 500px) {
+    .removeButton {
+        right: -80%;
+    }
+}

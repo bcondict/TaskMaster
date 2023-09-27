@@ -17,6 +17,7 @@
 import styles from "./TaskList.module.css"
 import CustomCheckbox from "./CustomCheckbox";
 import { useEffect, useRef } from "react";
+import TaskListContent from "./TaskListContent";
 
 
 const TaskList = ({ summary, children }) => {
@@ -29,13 +30,14 @@ const TaskList = ({ summary, children }) => {
   // when the component mounts, create the animation
   useEffect(() => {
     const animationSettings = {
-        fill: "forwards",
-        duration: 200,
-        delay: 33
-      };
+      fill: "forwards",
+      duration: 200,
+      delay: 33
+    };
 
-      // if containerAnimation.current is not null, create the animation
-      if (containerAnimation.current) {
+    // if containerAnimation.current is not null, create the animation
+    if (containerAnimation.current) {
+      // clone the containerAnimation.current and store it in closeContainer.current
       closeContainer.current = containerAnimation.current.cloneNode(true)
       
       // create the animation and store the handler in animationHandler.current
@@ -49,7 +51,6 @@ const TaskList = ({ summary, children }) => {
       closeAnimationHandler.current = closeContainer.current.animate(
         // keyframes
         [{ transform: "translateY(0)", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, { transform: "translateY(-100%)", clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }],
-        // [{ transform: "translateY(0)" }, { transform: "translateY(-100%)" }],
         animationSettings
       )
     }
@@ -75,18 +76,14 @@ const TaskList = ({ summary, children }) => {
           {
             animationHandler.current.play();
             animationHandler.current.playbackRate = 1;
-            const {top, left, height, width} = containerAnimation.current.getBoundingClientRect();
+            const {top, left, height, width } = containerAnimation.current.getBoundingClientRect();
             closeContainer.current.style.position = "absolute";
             closeContainer.current.style.top = `${top + height}px` ;
             closeContainer.current.style.left = `${left}px`;
             closeContainer.current.style.height = `${height}px`;
             closeContainer.current.style.width = `${width}px`;
-            // closeContainer.current.style.padding = "0px";
-            closeContainer.current.style.zIndex = -0;
             closeContainer.current.style.boxSizing = "border-box";
             closeContainer.current.style.fontFamily = "inherit";
-
-
             document.body.appendChild(closeContainer.current)
             closeAnimationHandler.current.play();
             closeAnimationHandler.current.playbackRate = 1;
@@ -102,9 +99,9 @@ const TaskList = ({ summary, children }) => {
         <div>{summary}</div>
       </summary>
       <div style={{overflow: "hidden"}}>
-        <div className={styles.taskListContent} ref={containerAnimation}>
+        <TaskListContent className={styles.taskListContent} customRef={containerAnimation}>
           {children}
-        </div>
+        </TaskListContent>
       </div>
     </details>
   )

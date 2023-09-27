@@ -1,0 +1,89 @@
+.addTaskScreen {
+    --width-screen: 50%;
+    --height-screen: 60%;
+    position: absolute;
+    /*
+    display: flex; */
+
+    background: rgba( 248, 240, 236, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    width: var(--width-screen);
+    height: var(--height-screen);
+
+    /* bottom: 30%; */
+    /* right: 50%; */
+    /* transform: translateX(50%); */
+    transform-origin: bottom right;
+
+    /* justify-self: flex-end; */
+    /* animation: slideInFromBottom 3s 1s 5; */
+}
+
+/* Media Queries */
+
+@media (width <= 1200px) {
+    .addTaskScreen {
+        --width-screen: 70%;
+        --height-screen: 80%;
+        width: var(--width-screen);
+        height: var(--height-screen);
+
+        top: 3rem;
+    }
+}
+
+@media (width <= 700px) {
+    .addTaskScreen {
+        --width-screen: 90%;
+        --height-screen: 90%;
+        width: var(--width-screen);
+        height: var(--height-screen);
+
+        top: 1rem;
+    }
+}
+
+@media (width <= 540px) {
+    .addTaskScreen {
+        --width-screen: 97%;
+        --height-screen: 90%;
+
+        width: var(--width-screen);
+        height: var(--height-screen);
+
+        top: 1rem;
+    }
+}
+
+.addTaskScreen {
+    animation: slideInFromBottom 4000ms 0s 3;
+    right: 0;
+    bottom: 0;
+    /* display: none; */
+}
+/* Animation */
+@keyframes slideInFromBottom {
+    0% {
+        width: 0;
+        height: 0;
+        display: block;
+    }
+
+    100% {
+        display: block;
+        width: var(--width-screen);
+        height: var(--height-screen);
+        bottom: 30%;
+        right: 50%;
+        transform: translateX(50%);
+        /* right: 0 - var(--width-screen); */
+        /* 
+        bottom: 0;
+        */
+    }
+}

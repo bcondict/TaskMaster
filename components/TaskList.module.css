@@ -14,18 +14,23 @@
     border-radius: 20px;
 
     transition: all 200ms;
+    /* background: rgba( 230, 219, 207, 0.65 ); */
+    /* box-shadow: 0 0px 32px 0 rgba( 31, 38, 135, 0.37 ); */
 }
 
+/* Rings of the notebook */
 .taskList::after {
     position: absolute;
     content: '';
+
     width: .4rem;
     height: .8rem;
     top: -0.4rem;
     left: 1rem;
+
+    color: white;
     background-color: currentColor;
     border-radius: 3px;
-    color: white;
     box-shadow: 
         calc(var(--start-ring) * 1) 0 0 0 currentColor,
         calc(var(--start-ring) * 2) 0 0 0 currentColor,
@@ -36,41 +41,28 @@
         calc(var(--start-ring) * 7) 0 0 0 currentColor,
         calc(var(--start-ring) * 8) 0 0 0 currentColor,
         calc(var(--start-ring) * 9) 0 0 0 currentColor,
-        calc(var(--start-ring) * 10) 0 0 0 currentColor
-    ;
+        calc(var(--start-ring) * 10) 0 0 0 currentColor;
 }
 
+/* Representation of Sheets */
 .taskList::before {
     position: absolute;
     content: '';
+
     width: 98%;
     height: 90%;
+    bottom: -.5rem;
+
     background: rgba( 230, 219, 207, 0.65 );
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-    backdrop-filter: blur( 7.5px );
-    -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
     margin: 2px ;
+
     left: 50%;
     transform: translateX(-50%);
-    bottom: -.4rem;
 }
 
-@keyframes notMargin {
-    0% {
-        margin-bottom: 4rem;
-    }
-    100% {
-        margin-bottom: 2rem;
-    }
-}
-
-.taskList:not(.taskList[open]) {
-    animation: notMargin 200ms forwards;
-
-}
+/* Open and close */
 .taskList:not(.taskList[open]).taskList::before {
     filter: opacity(1);
 }
@@ -78,6 +70,8 @@
 .taskList[open]::before {
     filter: opacity(0);
 }
+
+
 
 /* Tittle */
 .taskListSummary {
@@ -100,7 +94,6 @@
     padding-block-start: 1rem;
 
     /* pointer */
-    user-select: none;
     cursor: pointer;
 
 
@@ -122,8 +115,9 @@
 
     right: .3rem;
 
-    border: 10px solid;
+    border: 11px solid;
     border-color: transparent transparent transparent #ffC4CE;
+    
 
     transition: all 200ms;
 }
@@ -136,76 +130,66 @@
     color: #000000;
 
     /* visual properties */
-    /* background-color: #E6DBCF99; */
     background: rgba( 230, 219, 207, 0.65 );
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
-    /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 
     margin: 2px ;
-    /* margin-top: 0; */
-
-    /* pointer */
-    user-select: none;
-    cursor: pointer;
+    margin-top: 0;
 
     /* box model */
     padding-block: .5rem;
     padding-inline: 1.5rem;
     border-radius: 0px 0px 20px 20px ;
-
 }
 
-@keyframes margin {
-    0% {
-        margin-bottom: 2rem;
-    }
-    100% {
-        margin-bottom: 4rem;
-    }
-}
-
-/* Buttons */
-.taskListSummary > [role="button"] {
-    /* box model */
-    position: absolute;
-}
 
 /* Custom Checkbox */
 .taskListSummary > [role="button"]:first-child {
     /* box model */
+    position: absolute;
+
     height: 20px;
     width: 20px;
     left: .6rem;
-
 }
+
 
 /* Text */
 .taskListSummary > div {
-    /* background-color: red; */
     margin-left: 1rem;
     width: 90%;
 }
 
-/* Delete Bottom */
-.taskListSummary > [role="button"]:last-child {
-    /* box model */
-    right: .3rem;
+
+/* Hovers */
+.taskList:not(.taskList[open]).taskList:hover {
+    animation: idleHover 1.5s ease-in-out 200ms infinite;
+    padding-bottom: .8rem;
 }
 
-
-.taskList[open] > .taskListSummary {
-    /* box model */
-    border-radius: 20px 20px 0px 0px ;
+.taskList[open] > .taskListSummary:hover {
+    transform: scale(1.03);
+    padding-bottom: 1rem;
 }
 
 
 /* Animations */
-
 .taskList[open] > .taskListSummary::before {
     transform: rotate(90deg) translate(.2rem, .3rem);
+}
+
+@keyframes idleHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 

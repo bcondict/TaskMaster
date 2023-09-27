@@ -1,3 +1,18 @@
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    background-color: #F1F0E8;
+    justify-content: center;
+    overflow: hidden;
+    /* display: "grid",
+    height: "100vh",
+    width: "100%",
+    justifyContent:"center",
+    backgroundColor: "#F1F0E8",
+    overflow: "scroll" */
+}
+
 .customBackground {
     overflow: hidden;
     overflow-y: auto;
@@ -17,6 +32,7 @@
 
     /* box model */
     width: 30rem;
+    height: 95%;
     margin-top: 1rem;
     border-radius: .5rem;
 }
@@ -34,5 +50,6 @@
 @media (max-width: 500px) {
     .customBackground {
         width: 95%;
+        height: 90%;
     }
 }

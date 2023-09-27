@@ -6,8 +6,8 @@
 
     bottom: 0;
     right: 0;
-    height: 140px;
-    width: 140px;
+    height: 110px;
+    width: 110px;
 
     background-color: #f1f0e8;
 
@@ -21,8 +21,8 @@
 /* Inner circle */
 
 .customButton {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
 
     background-color: #579BB1;
     background-image: url("../public/plus.svg");
