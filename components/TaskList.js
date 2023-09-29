@@ -20,7 +20,7 @@ import { useEffect, useRef } from "react";
 import TaskListContent from "./TaskListContent";
 
 
-const TaskList = ({ summary, children }) => {
+const TaskList = ({ summary, dateEnd, dateStart, children }) => {
   // use a ref to store the animation handler
   const containerAnimation = useRef(null);
   const closeContainer = useRef(null);
@@ -50,7 +50,10 @@ const TaskList = ({ summary, children }) => {
       // when the animation finishes, hide the container
       closeAnimationHandler.current = closeContainer.current.animate(
         // keyframes
-        [{ transform: "translateY(0)", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }, { transform: "translateY(-100%)", clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }],
+        [
+          { transform:"translateY(0)", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"},
+          { transform: "translateY(-100%)", clipPath: "polygon(0 95%, 100% 95%, 100% 100%, 0 100%)"}
+        ],
         animationSettings
       )
     }
@@ -83,7 +86,7 @@ const TaskList = ({ summary, children }) => {
             closeContainer.current.style.height = `${height}px`;
             closeContainer.current.style.width = `${width}px`;
             closeContainer.current.style.boxSizing = "border-box";
-            closeContainer.current.style.fontFamily = "inherit";
+            // closeContainer.current.style.fontFamily = "inherit";
             document.body.appendChild(closeContainer.current)
             closeAnimationHandler.current.play();
             closeAnimationHandler.current.playbackRate = 1;
@@ -99,7 +102,7 @@ const TaskList = ({ summary, children }) => {
         <div>{summary}</div>
       </summary>
       <div style={{overflow: "hidden"}}>
-        <TaskListContent className={styles.taskListContent} customRef={containerAnimation}>
+        <TaskListContent className={styles.taskListContent} dateStart={dateStart} dateEnd={dateEnd} customRef={containerAnimation}>
           {children}
         </TaskListContent>
       </div>

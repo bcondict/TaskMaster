@@ -8,25 +8,26 @@ import TaskListContent from "../components/TaskListContent";
 import AddTaskScreen from "../components/AddTaskScreen";
 
 export default function Home() {
-  // const [tasks, setTasks] = useState([])
+  const [buttonPressed, setButtonPressed] = useState(false)
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:5555/tasks")
-  //     .then((res) => {
-  //       setTasks(res.data.data)
-  //     })
-  //     .catch((err) => {
-  //       console.log(err)
-  //     })
-  // }, []);
+  const hanldeButtonClick = () => {
+    setButtonPressed(!buttonPressed)
+  }
+  const [tasks, setTasks] = useState([])
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5555/tasks")
+      .then((res) => {
+        setTasks(res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, []);
 
   return (
-    <div
-      className={styles.container}
-      style={{
-      }}
-    >
+    <div className={styles.container}>
       <div
         className={styles.customBackground}
         align="center"
@@ -43,10 +44,31 @@ export default function Home() {
         <TaskList summary={"algo algo algo algo algoagl "}>mucho texto mucho texto mnucho texto </TaskList>
         <TaskList summary={"algo algo algo algo algoagl algo algo algo algo algoagl algo algo algo algo algoagl "}>mmucho texto mucho texto mucho texto ucho texto mucho texto mucho texto </TaskList>
 
-      </div>
+        {tasks.map((task, index) => (
+          <TaskList
+            key={index}
+            // summary={tasks.summary}
+            summary={task.name}
+            dateEnd={task.dateEnd}
+            dateStart={task.dateStart}
+            // priority={task.priority}
+            // status={task.status}
+          >
+            {task.description}
+            {/* {task.task} */}
+          </TaskList>
+        ))};
 
-      <AddTaskScreen/>
-      <AddTaskButton/>
+      </div>
+      {/* <div style={{
+        width: "100vh",
+        height: "100vh",
+        backgroundColor: "red",
+      }}></div> */}
+
+      <AddTaskScreen buttonPressed={buttonPressed}/>
+      <AddTaskButton buttonPressed={buttonPressed} hanldeButtonClick={hanldeButtonClick}/>
+      {/* {console.log(buttonPressed)} */}
     </div>
   )
 }

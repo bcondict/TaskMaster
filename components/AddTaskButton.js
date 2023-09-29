@@ -7,15 +7,11 @@ import { useState } from "react"
  *
  * @returns { JSX.Element } Button to add a task
  */
-const AddTaskButton = () => {
-  const [buttonPressed, setButtonPressed] = useState(false)
+const AddTaskButton = ({ buttonPressed, hanldeButtonClick}) => {
 
-  const hanldeButtonClick = () => {
-    setButtonPressed(!buttonPressed)
-  }
 
   return (
-    <div className={styles.buttonContainer}>
+    <div className={`${styles.buttonContainer} ${buttonPressed ? styles.rotated : ''}`}>
       <button
         className={`${styles.customButton} ${buttonPressed ? styles.rotated : ''}`}
         onClick={hanldeButtonClick}

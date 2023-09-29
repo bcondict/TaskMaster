@@ -1,10 +1,12 @@
 .addTaskScreen {
     --width-screen: 50%;
     --height-screen: 60%;
+    --custom-bottom: 30%;
+    --custom-right: 50%;
+    --custom-translate: 50%;
     position: absolute;
-    /*
-    display: flex; */
 
+    /* backgoround */
     background: rgba( 248, 240, 236, 0.5 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 7px );
@@ -12,78 +14,116 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
+
+    /* box model */
     width: var(--width-screen);
     height: var(--height-screen);
+    bottom: var(--custom-bottom);
+    right: var(--custom-right);
+    transform: translateX(var(--custom-translate));
 
-    /* bottom: 30%; */
-    /* right: 50%; */
-    /* transform: translateX(50%); */
-    transform-origin: bottom right;
+    transition: all 200ms linear;
 
-    /* justify-self: flex-end; */
-    /* animation: slideInFromBottom 3s 1s 5; */
+    overflow: hidden;
 }
 
-/* Media Queries */
 
+/* Active - Inactive */
+.addTaskScreen.active {
+    animation: slideInFromBottom 250ms linear;
+    display: block;
+    opacity: 1;
+}
+.addTaskScreen.inactive {
+    animation: slideOutToBottom 250ms linear forwards;
+}
+
+
+
+/* Media Queries */
 @media (width <= 1200px) {
     .addTaskScreen {
         --width-screen: 70%;
         --height-screen: 80%;
+        --custom-bottom: 8rem;
+        --custom-right: 15%;
+        --custom-translate: 0;
+
         width: var(--width-screen);
         height: var(--height-screen);
 
-        top: 3rem;
+        bottom: var(--custom-bottom);
+        right: var(--custom-right);
     }
 }
-
 @media (width <= 700px) {
     .addTaskScreen {
         --width-screen: 90%;
         --height-screen: 90%;
+        --custom-right: 5%;
+        --custom-bottom: 5.2rem;
+
         width: var(--width-screen);
         height: var(--height-screen);
 
-        top: 1rem;
+        bottom: var(--custom-bottom);
+        right: var(--custom-right);
     }
 }
-
 @media (width <= 540px) {
     .addTaskScreen {
         --width-screen: 97%;
-        --height-screen: 90%;
+        --height-screen: 91.4%;
+        --custom-right: 1.5%;
+        --custom-bottom: 4.4rem;
 
         width: var(--width-screen);
         height: var(--height-screen);
 
-        top: 1rem;
+        bottom: var(--custom-bottom);
+        right: var(--custom-right);
     }
 }
 
-.addTaskScreen {
-    animation: slideInFromBottom 4000ms 0s 3;
-    right: 0;
-    bottom: 0;
-    /* display: none; */
-}
+
 /* Animation */
 @keyframes slideInFromBottom {
     0% {
         width: 0;
         height: 0;
-        display: block;
+        right: 0;
+        bottom: 0;
+        transform: translateX(0);
+        opacity: 0;
+        display: none;
     }
-
     100% {
-        display: block;
         width: var(--width-screen);
         height: var(--height-screen);
-        bottom: 30%;
-        right: 50%;
-        transform: translateX(50%);
-        /* right: 0 - var(--width-screen); */
-        /* 
+        bottom: var(--custom-bottom);
+        right: var(--custom-right);
+        transform: translateX(var(--custom-translate));
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes slideOutToBottom {
+    0% {
+        width: var(--width-screen);
+        height: var(--height-screen);
+        bottom: var(--custom-bottom);
+        right: var(--custom-right);
+        transform: translateX(var(--custom-translate));
+        opacity: 1;
+        display: block;
+    }
+    100% {
+        width: 0;
+        height: 0;
+        right: 0;
         bottom: 0;
-        */
+        transform: translateX(0);
+        opacity: 0;
+        display: none;
     }
 }
