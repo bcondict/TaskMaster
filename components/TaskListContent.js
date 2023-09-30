@@ -2,7 +2,7 @@ import styles from "./TaskListContent.module.css";
 
 const ContentDate = ({ date, text }) => {
   return (
-    <div className={styles.something}>
+    <div className={styles.dateObjects}>
       <div className={styles.dateInformation}>
         {text}
       </div>

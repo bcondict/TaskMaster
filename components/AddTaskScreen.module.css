@@ -30,12 +30,12 @@
 
 /* Active - Inactive */
 .addTaskScreen.active {
-    animation: slideInFromBottom 250ms linear;
+    animation: slideInFromBottom 200ms linear;
     display: block;
     opacity: 1;
 }
 .addTaskScreen.inactive {
-    animation: slideOutToBottom 250ms linear forwards;
+    animation: slideOutToBottom 200ms linear forwards;
 }
 
 

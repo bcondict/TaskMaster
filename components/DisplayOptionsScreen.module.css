@@ -1,0 +1,137 @@
+/* all background  */
+.displayScreen {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+
+    /* blur effect */
+    background: rgba( 248, 240, 236, 0.5 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+
+    /* background-color: white; */
+    width: 100%;
+    height: 100%;
+
+    transition: all 200ms linear;
+}
+
+.displayScreen.active {
+    display: block;
+    animation: fadeIn 150ms linear;
+    opacity: 1;
+}
+.displayScreen.inactive {
+    animation: fadeOut 150ms linear forwards;
+}
+
+
+
+/* buttons */
+.button {
+    --custom-buttom: -3rem;
+    position: absolute;
+    display: flex;
+
+    height: 50px;
+    bottom: 3rem;
+    justify-content: flex-end;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.button:hover > * {
+    scale: .9;
+}
+
+
+
+.displayScreen > :nth-child(1) {
+    --custom-buttom: -5rem;
+    animation: slideInFromBottom 200ms linear both;
+}
+
+.displayScreen > :nth-child(2) {
+    --custom-buttom: -9.8rem;
+    animation: slideInFromBottom 250ms linear both;
+}
+
+.displayScreen > :nth-child(3) {
+    --custom-buttom: -14.6rem;
+    animation: slideInFromBottom 300ms linear both;
+}
+
+
+/* each buttom */
+.task, .routine, .project {
+    height: 100%;
+    width: 50px;
+
+    border-radius: 100%;
+    box-shadow: 0 10px 20px 0 rgba( 31, 38, 135, 0.37 );
+    border-color: transparent;
+    /* background-color: blue; */
+    background-color: #579bb1;
+
+    cursor: pointer;
+}
+
+.button p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+
+    color: black;
+    margin-right: 1rem;
+    text-align: end;
+}
+
+
+/* Media Queries */
+@media (width <= 1200px) {
+    .button {
+        right: 3rem;
+    }
+}
+
+@media (width <= 500px) {
+    .button {
+        right: 2rem;
+    }
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(calc(var(--custom-buttom) + 2rem));
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(var(--custom-buttom));
+        opacity: 1;
+    }
+}

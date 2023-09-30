@@ -5,53 +5,50 @@
 */
 
 
-/* Date Information */
+/* Date Section */
 .date {
     display: flex;
-    padding: .1rem;
+    /* padding: .1rem; */
     justify-content: flex-end;
+    /* background-color: red; */
+    /* margin: 0.5rem; */
 }
 
 /* Child Date Information */
-.date > * > * {
+/* .date > * > * {
+} */
+
+.dateObjects {
+    margin-left: 2rem;
+
+    /* background-color: blue; */
+    /*
+    opacity: .5; */
+}
+
+/* Start and End */
+.date .dateInformation {
+    position: absolute;
+    background-color: #c8ccca;
+
+    transform: translate(-.8rem, -.15rem);
+    height: 1.2rem;
+    padding-right: .1rem;
+    /* background-color: red; */
+    /* display: none; */
+}
+
+/* Number of Start or End */
+.date .dateNumer {
     padding-left: .5rem;
     padding-right: .5rem;
     border-radius: 1rem;
-}
-
-.date .dateInformation {
-    position: absolute;
-    display: none;
-}
-
-.date .dateNumer {
     box-shadow: 0 0 0 2px #eff4f0;
     font-size: medium;
-    margin: .5rem;
+    /* margin: .5rem; */
     margin-top: .8rem;
 }
 
-/* Date Start */
-.date > :nth-child(1) .dateInformation {
-    left: 4rem;
-    top: .4rem;
-
-    background-color: #c8ccca;
-
-    padding: .1;
-    height: 1.2rem;
-}
-
-/* Date End */
-.date > :nth-child(2) .dateInformation {
-    left: 11.2rem;
-    top: .4rem;
-
-    background-color: #c8ccca;
-
-    padding: .1;
-    height: 1.2rem;
-}
 
 /* other text */
 

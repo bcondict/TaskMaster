@@ -20,7 +20,7 @@ const AddTaskScreen = ({ buttonPressed }) => {
         ${buttonPressed ? styles.active : styles.inactive}
       `}
     >
-      <input />
+      {/* <input /> */}
     </div>
   )
 }
