@@ -14,7 +14,7 @@ To get Started and see th preview you must follow the next steps:
 - Follow the instructions in the backend repository to connect the database
 - To run the project you must run `npm run dev` in both projects
 
-# Preview
+## Preview
 ![preview](./Images/preview.png)
 
 The project so far is able to get the tasks only, the principal browser is Chrome, and is full responsive.
