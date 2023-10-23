@@ -52,7 +52,7 @@ const TaskList = ({ summary, dateEnd, dateStart, children }) => {
         // keyframes
         [
           { transform:"translateY(0)", clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)"},
-          { transform: "translateY(-100%)", clipPath: "polygon(0 95%, 100% 95%, 100% 100%, 0 100%)"}
+          { transform: "translateY(-100%)", clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"}
         ],
         animationSettings
       )

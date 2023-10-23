@@ -1,4 +1,5 @@
 import styles from "./DisplayOptionsScreen.module.css";
+// import NewTask from "../public/new_task";
 
 const DisplayOptionsScreen = ({ buttonPressed }) => {
   return (
@@ -9,6 +10,7 @@ const DisplayOptionsScreen = ({ buttonPressed }) => {
       <div className={`${styles.button}`} >
         <p>new task</p>
         <button className={`${styles.task}`}></button>
+        {/* <NewTask className={`${styles.task}`}/> */}
       </div>
       <div className={`${styles.button}`}>
         <p>Routine</p>
