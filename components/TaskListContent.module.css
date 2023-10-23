@@ -1,29 +1,19 @@
 /* 
-.taskListContent {
-    background-color: red;
-}
 */
+.taskListContent {
+    /* background-color: red; */
+    padding-top: 1.4rem;
+}
 
 
 /* Date Section */
 .date {
     display: flex;
-    /* padding: .1rem; */
     justify-content: flex-end;
-    /* background-color: red; */
-    /* margin: 0.5rem; */
 }
-
-/* Child Date Information */
-/* .date > * > * {
-} */
 
 .dateObjects {
     margin-left: 2rem;
-
-    /* background-color: blue; */
-    /*
-    opacity: .5; */
 }
 
 /* Start and End */
@@ -31,11 +21,11 @@
     position: absolute;
     background-color: #c8ccca;
 
+    font-size: 1rem;
+
     transform: translate(-.8rem, -.15rem);
     height: 1.2rem;
     padding-right: .1rem;
-    /* background-color: red; */
-    /* display: none; */
 }
 
 /* Number of Start or End */
@@ -45,18 +35,15 @@
     border-radius: 1rem;
     box-shadow: 0 0 0 2px #eff4f0;
     font-size: medium;
-    /* margin: .5rem; */
     margin-top: .8rem;
 }
 
 
 /* other text */
 
-/*
 .contentText {
-
+    margin-bottom: .5rem;
 }
-*/
 
 
 /* Action Button */
@@ -74,6 +61,7 @@
 .actionButtonEdit{
     text-align: center;
     width: fit-content;
+    
 }
 
 /* Remove button */

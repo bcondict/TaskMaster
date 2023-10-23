@@ -13,12 +13,9 @@
   "author": "Jesus Junco",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.0",
-    "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/inder": "^5.0.8",
-    "@fontsource/ubuntu": "^5.0.8",
     "axios": "^1.5.0",
     "framer-motion": "^10.15.1",
     "next": "^13.4.13",

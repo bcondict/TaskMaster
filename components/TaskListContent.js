@@ -19,20 +19,26 @@ const TaskListContent = ({ children, customRef, className, isList, dateStart, da
 
   if (newDateStart !== undefined) {
     newDateStart = new Date(dateStart)
-    newDateStart = newDateStart.getDate() + "-" + (newDateStart.getMonth() + 1)
+    newDateStart = newDateStart.getDate() + "/" + (newDateStart.getMonth() + 1)
   }
 
   newDateEnd = newDateEnd.getDate() + "-" + (newDateEnd.getMonth() + 1)
   return (
     <div className={`${className} ${styles.taskListContent}`} ref={customRef}>
       <div className={styles.date}>
-        {/* <ContentDate date={"01-01"} text="Start" />
-        <ContentDate date="01-01" text="End" /> */}
+        <ContentDate date={"11:00 am"} text="From" />
+        <ContentDate date={"11:00 am"} text="To" />
+        {/* 
+        <ContentDate date={"01/01"} text="From" />
+        <ContentDate date="01/01" text="To" />
+        */}
+        {/*
         {newDateStart !== undefined ? 
           <ContentDate date={newDateStart} text="Start" /> :
           <></>
         }
         <ContentDate date={newDateEnd} text="End" />
+        */}
       </div>
       <div className={`${styles.contentText} ${isList ? styles.contentTextList : ''}`}>
         {children}

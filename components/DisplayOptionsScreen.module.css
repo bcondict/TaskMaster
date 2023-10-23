@@ -37,14 +37,11 @@
     bottom: 3rem;
     justify-content: flex-end;
     align-items: center;
+    right: 2rem;
+
 
     cursor: pointer;
 }
-
-.button:hover > * {
-    scale: .9;
-}
-
 
 
 .displayScreen > :nth-child(1) {
@@ -77,6 +74,29 @@
     cursor: pointer;
 }
 
+.task {
+    background: url('../public/new_task.svg') no-repeat;
+    background-size: auto 70%;
+    background-position: .6rem .5rem;
+    background-color: #579bb1;
+    /* width: auto; */
+}
+
+.routine {
+    background: url('../public/icon_routine.svg') no-repeat;
+    background-size: auto 70%;
+    background-position: .46rem .45rem;
+    background-color: #579bb1;
+}
+
+.project {
+    background: url('../public/icon_project2.svg') no-repeat;
+    background-size: auto 70%;
+    background-position: center;
+    background-color: #579bb1;
+}
+
+
 .button p {
     font-size: 1.2rem;
     font-weight: 500;
@@ -89,6 +109,12 @@
 
 
 /* Media Queries */
+@media (width > 1200px) {
+    .button:hover > * {
+        scale: .9;
+    }
+}
+
 @media (width <= 1200px) {
     .button {
         right: 3rem;

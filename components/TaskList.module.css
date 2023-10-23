@@ -9,7 +9,7 @@
 
     text-align: left;
     font-size: 18px;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
 
     border-radius: 20px;
 
@@ -58,7 +58,9 @@
     bottom: -.5rem;
 
     background: rgba( 230, 219, 207, 0.65 );
+    /* background: rgb( 230, 219, 207); */
     border-radius: 10px;
+    z-index: 0;
 
     margin: 2px ;
 
@@ -69,6 +71,7 @@
 /* Open and close */
 .taskList:not(.taskList[open]).taskList::before {
     filter: opacity(1);
+
 }
 
 .taskList[open]::before {
@@ -82,17 +85,21 @@
     /* Display */
     display: flex;
     align-items: center;
+    position: sticky;
 
     /* text */
-    font-size: 18px;
+    font-size: 1.2rem;
+    /* font-size: 18px; */
     color: #000000;
 
     /* visual properties */
     background-color: #ADC4CE;
-    /* background: rgba( 230, 219, 207, 0.65 ); */
     box-shadow: 0 0px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /*
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
+    */
+
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding-block-start: 1rem;
@@ -130,11 +137,15 @@
 .taskListContent {
     /* text */
     font-size: 18px;
-    font-family: 'Indie Flower', cursive;
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Poppins', sans-serif;
     color: #000000;
 
     /* visual properties */
-    background: rgba( 230, 219, 207, 0.65 );
+    /* background: rgba( 230, 219, 207, 0.65 ); */
+    /* background: rgb( 230, 219, 207); */
+    background-color: #cacecb;
+
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
@@ -167,18 +178,6 @@
 }
 
 
-/* Hovers */
-.taskList:not(.taskList[open]).taskList:hover {
-    animation: idleHover 1.5s ease-in-out 200ms infinite;
-    padding-bottom: .8rem;
-}
-
-.taskList[open] > .taskListSummary:hover {
-    transform: scale(1.03);
-    padding-bottom: 1rem;
-}
-
-
 /* Animations */
 .taskList[open] > .taskListSummary::before {
     transform: rotate(90deg) translate(.2rem, .3rem);
@@ -187,18 +186,34 @@
 @keyframes idleHover {
     0% {
         transform: scale(1);
+        /* font-size: 1.2; */
     }
     50% {
         transform: scale(1.03);
+        /* font-size: 1.25rem; */
     }
     100% {
         transform: scale(1);
+        /* font-size: 1.2; */
     }
 }
 
 
 /* media query */
 
+@media (min-width: 1200px) {
+    /* Hovers */
+    .taskList:not(.taskList[open]).taskList:hover {
+        animation: idleHover 1.5s ease-in-out 200ms infinite;
+        padding-bottom: .8rem;
+    }
+
+    .taskList[open] > .taskListSummary:hover {
+        /* transform: scale(1.03); */
+        font-size: 1.25rem;
+        /* padding-bottom: 1rem; */
+    }
+}
 @media (min-width: 500px) {
     .taskList {
         --start-ring: 2.45rem;
