@@ -3,7 +3,6 @@ import TaskList from "../components/TaskList";
 import axios from "axios"
 import { useEffect, useState } from "react";
 import styles from "./index.module.css"
-import "@fontsource/ubuntu"
 import TaskListContent from "../components/TaskListContent";
 import AddTaskScreen from "../components/AddTaskScreen";
 import DisplayOptionsScreen from "../components/DisplayOptionsScreen";
